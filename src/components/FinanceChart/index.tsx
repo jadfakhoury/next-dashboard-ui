@@ -1,6 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import styles from './styles.module.css';
+
 import {
   LineChart,
   Line,
@@ -77,10 +79,10 @@ const data = [
 
 const FinanceChart = () => {
   return (
-    <div className='bg-white rounded-xl w-full h-full p-4'>
+    <div className={styles.container}>
       {/* Title */}
-      <div className='flex justify-between items-center'>
-        <h1 className='text-lg font-semibold'>Finance</h1>
+      <div className={styles.header}>
+        <h1 className={styles.title}>Finance</h1>
         <Image src='/moreDark.png' alt='' width={20} height={20} />
       </div>
       <ResponsiveContainer width='100%' height='100%'>

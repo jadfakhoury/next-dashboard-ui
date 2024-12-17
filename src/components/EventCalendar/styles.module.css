@@ -1,0 +1,59 @@
+.container {
+  padding: 1rem;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eventCard {
+  padding: 1.25rem;
+  border-radius: 0.375rem;
+  border-width: 2px;
+  border-top-width: 4px;
+  border-color: #f3f4f6;
+}
+
+.eventCard:nth-child(odd) {
+  border-top-color: var(--lamaSky);
+}
+
+.eventCard:nth-child(even) {
+  border-top-color: var(--lamaYellow);
+}
+
+.cardTitle {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.cardTime {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #d1d5db;
+}
+
+.cardDescription {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #9ca3af;
+}

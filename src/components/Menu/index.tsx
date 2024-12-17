@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from './styles.module.css';
 
 const menuItems = [
   {
@@ -118,9 +119,9 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <div className='mt-4 text-sm'>
+    <div className={styles.container}>
       {menuItems.map((i) => (
-        <div className='flex flex-col gap-2' key={i.title}>
+        <div className={styles.header} key={i.title}>
           <span className='hidden lg:block text-gray-400 front-light my-4'>
             {i.title}
           </span>
