@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import styles from './styles.module.css';
 import {
   RadialBarChart,
   RadialBar,
@@ -28,15 +29,15 @@ const data = [
 
 const CountChart = () => {
   return (
-    <div className='bg-white rounded-xl w-full h-full p-4'>
+    <div className={styles.container}>
       {/* Title */}
-      <div className='flex justify-between items-center'>
-        <h1 className='text-lg font-semibold'>Students</h1>
+      <div className={styles.header}>
+        <h1 className={styles.title}>Students</h1>
         <Image src='/moreDark.png' alt='' width={20} height={20} />
       </div>
 
       {/* Chart */}
-      <div className='relative w-full h-[75%]'>
+      <div className={styles.chart}>
         <ResponsiveContainer>
           <RadialBarChart
             cx='50%'
@@ -54,21 +55,21 @@ const CountChart = () => {
           alt=''
           width={50}
           height={50}
-          className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
+          className={styles.image}
         />
       </div>
 
       {/* Bottom */}
-      <div className='flex justify-center gap-16'>
-        <div className=' flex flex-col gap-1'>
-          <div className='w-5 h-5 bg-lamaSky rounded-full'></div>
-          <h1 className='font-bold'>1,234</h1>
-          <h2 className='text-xs text-gray-300'>Boys (55%)</h2>
+      <div className={styles.legendContainer}>
+        <div className={styles.legend}>
+          <div className={`${styles.legendCircle} ${styles.lamaSky}`}></div>
+          <h1 className={styles.legendNumber}>1,234</h1>
+          <h2 className={styles.legendDetails}>Boys (55%)</h2>
         </div>
-        <div className=' flex flex-col gap-1'>
-          <div className='w-5 h-5 bg-lamaYellow rounded-full'></div>
-          <h1 className='font-bold'>1,234</h1>
-          <h2 className='text-xs text-gray-300'>Girls (45%)</h2>
+        <div className={styles.legend}>
+          <div className={`${styles.legendCircle} ${styles.lamaYellow}`}></div>
+          <h1 className={styles.legendNumber}>1,234</h1>
+          <h2 className={styles.legendDetails}>Girls (45%)</h2>
         </div>
       </div>
     </div>
