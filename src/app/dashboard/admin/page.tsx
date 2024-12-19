@@ -3,6 +3,7 @@ import CountChart from '@/components/CountChart';
 import EventCalendar from '@/components/EventCalendar';
 import FinanceChart from '@/components/FinanceChart';
 import UserCard from '@/components/UserCard';
+import styles from './styles.module.css';
 
 const AdminPage = () => {
   return (
