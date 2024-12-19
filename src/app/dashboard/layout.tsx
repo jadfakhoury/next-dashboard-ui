@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Menu from '@/components/Menu';
 import NavBar from '@/components/NavBar';
+import styles from './styles.module.css';
 
 export default function RootLayout({
   children,
@@ -9,12 +10,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='h-screen flex'>
+    <div className={styles.container}>
       {/* LEFT */}
-      <div className='w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4'>
+      <div className={styles.leftContainer}>
         <Link
           href='/'
-          className='flex items-center justify-center lg:justify-start gap-2'
+          className={styles.logo}
         >
           <Image src='/logo.png' alt='logo' width={32} height={32} />
           <span className='hidden lg:block'>SchoolLama</span>
@@ -23,7 +24,7 @@ export default function RootLayout({
       </div>
 
       {/* Right */}
-      <div className='w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll'>
+      <div className={styles.rightContainer}>
         <NavBar />
         {children}
       </div>

@@ -7,10 +7,10 @@ import styles from './styles.module.css';
 
 const AdminPage = () => {
   return (
-    <div className='p-4 flex gap-4 flex-col md:flex-row'>
+    <div className={styles.container}>
       {/* Left */}
-      <div className='w-full lg:w-2/3 flex flex-col gap-8'>
-        <div className='flex gap-4 justify-between flex-wrap'>
+      <div className={styles.leftContainer}>
+        <div className={styles.cardsList}>
           <UserCard type='Student' />
           <UserCard type='Teacher' />
           <UserCard type='Parent' />
@@ -18,26 +18,26 @@ const AdminPage = () => {
         </div>
 
         {/* Middle Charts */}
-        <div className='flex gap-4 lg:flex-row'>
+        <div className={styles.middleChartsContainer}>
           {/* Count Chart */}
-          <div className='w-full lg:w-1/3 h-[450px]'>
+          <div className={styles.countChart}>
             <CountChart />
           </div>
 
           {/* Attendance Chart */}
-          <div className='w-full lg:w-2/3 h-[450px]'>
+          <div className={styles.attendanceChart}>
             <AttendanceChart />
           </div>
         </div>
 
         {/* Bottom Charts */}
-        <div className='w-full h-[500px]'>
+        <div className={styles.financeChart}>
           <FinanceChart />
         </div>
       </div>
 
       {/* Right */}
-      <div className='w-full lg:w-1/3 flex flex-col gap-8'>
+      <div className={styles.eventCalendar}>
         <EventCalendar />
       </div>
     </div>
