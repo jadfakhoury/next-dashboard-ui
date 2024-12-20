@@ -21,6 +21,10 @@
   background: #f7f8fa;
 }
 
+.title{
+  display: none; 
+}
+
 @media (min-width: 768px) {
   .leftContainer {
     width: 8%;
@@ -31,6 +35,9 @@
   }
 }
 @media (min-width: 1024px) {
+  .title{
+    display: block;
+  }
   .leftContainer {
     width: 16%;
   }

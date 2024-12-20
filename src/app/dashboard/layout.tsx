@@ -18,7 +18,7 @@ export default function RootLayout({
           className={styles.logo}
         >
           <Image src='/logo.png' alt='logo' width={32} height={32} />
-          <span className='hidden lg:block'>SchoolLama</span>
+          <span className={styles.title}>SchoolLama</span>
         </Link>
         <Menu />
       </div>
